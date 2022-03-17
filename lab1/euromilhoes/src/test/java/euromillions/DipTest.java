@@ -15,8 +15,6 @@ public class DipTest {
 
     private Dip instance;
 
-    final static int STARS_RANGE = 12;
-
     public DipTest() {
     }
 
