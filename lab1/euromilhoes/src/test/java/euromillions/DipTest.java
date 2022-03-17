@@ -15,6 +15,7 @@ public class DipTest {
 
     private Dip instance;
 
+    final static int STARS_RANGE = 12;
 
     public DipTest() {
     }
@@ -48,6 +49,13 @@ public class DipTest {
         // note: correct the implementation of the format(), not the test...
         String result = instance.format();
         assertEquals("N[ 10 20 30 40 50] S[  1  2]", result, "format as string: formatted string not as expected. ");
+    }
+
+    @Test
+    public void testNewStarRange() {
+        assertDoesNotThrow(() -> new Dip(new int[]{1, 2, 3, 4, 5}, new int[]{1, 5}));
+        assertDoesNotThrow(() -> new Dip(new int[]{1, 2, 3, 4, 5}, new int[]{11, 12}));
+        assertThrows(IllegalArgumentException.class, () -> new Dip(new int[]{1, 2, 3, 4, 5}, new int[]{14, 19}));
     }
 
 }

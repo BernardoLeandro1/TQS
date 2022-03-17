@@ -31,7 +31,7 @@ public class EuromillionsDrawTest {
         assertEquals(expected, actual);
 
         // test for no matches on the 3rd dip
-        testDraw = new EuromillionsDraw(new Dip(new int[]{9, 10, 11, 12, 13}, new int[]{2, 11}));
+        testDraw = new EuromillionsDraw(new Dip(new int[]{9, 10, 11, 12, 13}, new int[]{2, 3}));
         expected = new Dip(); // should return an empty Dip, since there are no matches
         actual = testDraw.findMatches(sampleCuppon).get(2);
         assertEquals(sampleCuppon.countDips(), testDraw.findMatches(sampleCuppon).size());

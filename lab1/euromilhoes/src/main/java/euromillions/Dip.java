@@ -6,6 +6,9 @@ import sets.SetOfNaturals;
 
 import java.util.Random;
 
+import java.util.Arrays;
+
+
 /**
  * A set of 5 numbers and 2 starts according to the Euromillions ranges.
  *
@@ -16,8 +19,10 @@ public class Dip {
     final static int MAX_NUMBER_OF_NUMBERS = 5;
     final static int MAX_NUMBER_OF_STARS = 2;
 
-    final static int NUMBER_LIMIT = 49;
-    final static int STAR_LIMIT = 11;
+    final static int NUMBER_MIN = 1;
+    final static int STAR_MIN = 1;
+    final static int NUMBER_MAX = 50;
+    final static int STAR_MAX = 12;
 
 
     private SetOfNaturals numbers;
@@ -31,13 +36,22 @@ public class Dip {
     public Dip(int[] arrayOfNumbers, int[] arrayOfStarts) {
         this();
 
-        if ( arrayOfNumbers.length == MAX_NUMBER_OF_NUMBERS && arrayOfStarts.length == MAX_NUMBER_OF_STARS) {
-            numbers.add(arrayOfNumbers);
-            starts.add(arrayOfStarts);
-        } else {
+        if (MAX_NUMBER_OF_NUMBERS != arrayOfNumbers.length || MAX_NUMBER_OF_STARS != arrayOfStarts.length)
             throw new IllegalArgumentException("wrong number of elements in numbers/stars");
-        }
 
+        if (!Arrays.stream(arrayOfNumbers).allMatch(this::validNumber) || !Arrays.stream(arrayOfStarts).allMatch(this::validStar))
+            throw new IllegalArgumentException("numbers/stars are out of range");
+
+        numbers.add(arrayOfNumbers);
+        starts.add(arrayOfStarts);
+    }
+
+    private boolean validNumber(int number) {
+        return number >= NUMBER_MIN && number <= NUMBER_MAX;
+    }
+
+    private boolean validStar(int star) {
+        return star >= STAR_MIN && star <= STAR_MAX;
     }
 
     public SetOfNaturals getNumbersColl() {
@@ -53,14 +67,14 @@ public class Dip {
 
         Dip randomDip = new Dip();
         for (int i = 0; i < MAX_NUMBER_OF_NUMBERS; ) {
-            int candidate = generator.nextInt(NUMBER_LIMIT) + 1;
+            int candidate = generator.nextInt(NUMBER_MAX) + NUMBER_MIN;
             if (!randomDip.getNumbersColl().contains(candidate)) {
                 randomDip.getNumbersColl().add(candidate);
                 i++;
             }
         }
         for (int i = 0; i < MAX_NUMBER_OF_STARS; ) {
-            int candidate = generator.nextInt(STAR_LIMIT) + 1;
+            int candidate = generator.nextInt(STAR_MAX) + STAR_MIN;
             if (!randomDip.getStarsColl().contains(candidate)) {
                 randomDip.getStarsColl().add(candidate);
                 i++;
