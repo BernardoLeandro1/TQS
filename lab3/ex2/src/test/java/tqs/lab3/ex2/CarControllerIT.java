@@ -40,7 +40,7 @@ public class CarControllerIT {
     @BeforeEach
     public void initCars() {
         cars = List.of(
-                new Car("Volkswagen", "idk"),
+                new Car("Volkswagen", "Golf"),
                 new Car("Rover", "OG"),
                 new Car("Hyundai", "Kauai"),
                 new Car("Rover", "Maestro"),
@@ -59,9 +59,9 @@ public class CarControllerIT {
     @Test
     public void whenCarListAdded_thenCarListPersisted() {
         List<Car> carsTest = List.of(
-                new Car("Ferrari", "abcd"),
-                new Car("Porsche", "wot"),
-                new Car("Toyota", "woah")
+                new Car("Ferrari", "F40"),
+                new Car("Porsche", "Panamera"),
+                new Car("Toyota", "Corolla")
         );
 
         carsTest.forEach((car) -> assertThat(restTemplate
