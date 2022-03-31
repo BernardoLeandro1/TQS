@@ -36,12 +36,12 @@ public class CarControllerTest {
     @Test
     public void whenListOfCarsAdded_thenListOfCarsPresent() throws Exception {
         List<Car> cars = List.of(
-                new Car("Volkswagen", "idk"),
+                new Car("Volkswagen", "Golf"),
                 new Car("Rover", "OG"),
                 new Car("Hyundai", "Kauai"),
                 new Car("Rover", "Maestro"),
                 new Car("Rover", "CityRover"),
-                new Car("Volkswagen", "¯\\_(ツ)_/¯")
+                new Car("Volkswagen", "Polo")
         );
 
         // Mocking
