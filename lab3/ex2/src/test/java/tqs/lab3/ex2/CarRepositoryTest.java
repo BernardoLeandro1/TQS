@@ -46,12 +46,12 @@ public class CarRepositoryTest {
     @Test
     public void whenMultipleCarsAdded_thenAllCarsPersisted() {
         List<Car> cars = List.of(
-                new Car("Volkswagen", "idk"),
+                new Car("Volkswagen", "Polo"),
                 new Car("Rover", "OG"),
                 new Car("Hyundai", "Kauai"),
                 new Car("Rover", "Maestro"),
                 new Car("Rover", "CityRover"),
-                new Car("Volkswagen", "¯\\_(ツ)_/¯")
+                new Car("Volkswagen", "Golf")
         );
 
         cars.forEach(entityManager::persist);
