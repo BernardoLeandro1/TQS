@@ -30,15 +30,6 @@ Open a command window and run:
 This runs Cucumber features using Cucumber's JUnit Platform Engine. The `Suite`
 annotation on the `RunCucumberTest` class tells JUnit to kick off Cucumber.
 
-## Use Gradle
-
-Open a command window and run:
-
-     ./gradlew test --rerun-tasks --info
-
-This runs Cucumber features using Cucumber's JUnit Platform Engine. The `Suite`
-annotation on the `RunCucumberTest` class tells JUnit to kick off Cucumber.
-
 ## Overriding options
 
 The Cucumber runtime uses configuration parameters to know what features to run,
