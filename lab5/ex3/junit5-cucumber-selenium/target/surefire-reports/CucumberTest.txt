@@ -1,0 +1,13 @@
+-------------------------------------------------------------------------------
+Test set: CucumberTest
+-------------------------------------------------------------------------------
+Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 0.131 s <<< FAILURE! - in CucumberTest
+Successful purchase  Time elapsed: 0.036 s  <<< ERROR!
+io.cucumber.core.runner.DuplicateStepDefinitionException: Duplicate step definitions in io.github.bonigarcia.BlazeSteps.iNavigateTo(java.lang.String) and io.github.bonigarcia.LoginSteps.iNavigateTo(java.lang.String)
+
+Successful login  Time elapsed: 0.005 s  <<< ERROR!
+io.cucumber.core.runner.DuplicateStepDefinitionException: Duplicate step definitions in io.github.bonigarcia.BlazeSteps.iNavigateTo(java.lang.String) and io.github.bonigarcia.LoginSteps.iNavigateTo(java.lang.String)
+
+Failure login  Time elapsed: 0.004 s  <<< ERROR!
+io.cucumber.core.runner.DuplicateStepDefinitionException: Duplicate step definitions in io.github.bonigarcia.BlazeSteps.iNavigateTo(java.lang.String) and io.github.bonigarcia.LoginSteps.iNavigateTo(java.lang.String)
+
