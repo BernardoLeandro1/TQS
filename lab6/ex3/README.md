@@ -10,3 +10,4 @@ These are based on the default conditions, changing only 2 conditions. Added cod
 By adding 5 new code smells, as we can see in the file Validation.png, we didn't pass the conditions imposed by the quality gate.
 The changes done were adding public to the classes of the tests files.
 As we can see in the CodeSmells.png file, it is advised to remove the public modifier from those files.
+By doing this, we added 10 minutes to the technical debt (also available on the Validation.png file), meaning we would have to spend 10 additional minutes to fix all the smells found.
