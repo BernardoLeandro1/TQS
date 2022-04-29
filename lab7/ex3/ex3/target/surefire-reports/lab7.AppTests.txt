@@ -1,0 +1,7 @@
+-------------------------------------------------------------------------------
+Test set: lab7.AppTests
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.228 s <<< FAILURE! - in lab7.AppTests
+lab7.AppTests  Time elapsed: 0.227 s  <<< ERROR!
+org.junit.platform.commons.PreconditionViolationException: Container container needs to be initialized
+

@@ -56,10 +56,10 @@ public class CarControllerTest {
 
     @Test
     void givenCars_whenGetCars_thenReturnJsonArray() throws Exception {
-        Car renault = new Car("Porsche", "Caen");
-        Car seat = new Car("Ford", "Focus");
-        Car toyota = new Car("BMW", "i8");
-        List<Car> cars = Arrays.asList(renault, seat, toyota);
+        Car porsche = new Car("Porsche", "Caen");
+        Car ford = new Car("Ford", "Focus");
+        Car bmw = new Car("BMW", "i8");
+        List<Car> cars = Arrays.asList(porsche, ford, bmw);
 
         when(service.getAllCars()).thenReturn(cars);
 

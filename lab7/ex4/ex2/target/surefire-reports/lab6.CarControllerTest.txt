@@ -1,0 +1,7 @@
+-------------------------------------------------------------------------------
+Test set: lab6.CarControllerTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 5.753 s <<< FAILURE! - in lab6.CarControllerTest
+lab6.CarControllerTest  Time elapsed: 5.752 s  <<< ERROR!
+java.lang.IllegalStateException: Could not find a valid Docker environment. Please see logs and check configuration
+
